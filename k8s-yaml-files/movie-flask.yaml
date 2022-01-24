@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: movie-flask
+  labels:
+    app: movie-flask
+spec:
+  containers:
+   - name: movie-flask
+     image: don9x2e/movie-flask:latest
+     ports:
+     - containerPort: 5000
