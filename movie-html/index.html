@@ -45,20 +45,20 @@
 <div class="cards">
   <div class="column cars">
     <div class="content">
-      <img id="justice" onclick="get(this.id)" src="assets/5.jpg" alt="Car" style="width:100%">
-      <h4>Dawn of Justice</h4>
+      <img id="jw1" onclick="get(this.id)" src="assets/7.jpg" alt="Car" style="width:100%">
+      <h4>jw1</h4>
     </div>
   </div>
   <div class="column cars">
     <div class="content">
-      <img id="suicide" onclick="get(this.id)" img src="assets/6.jpg" alt="Car" style="width:100%">
-      <h4>Suicide Squad</h4>
+      <img id="jw2" onclick="get(this.id)" src="assets/8.jpg" alt="Car" style="width:100%">
+      <h4>jw2</h4>
     </div>
   </div>
   <div class="column people">
     <div class="content">
-      <img id="john1" onclick="get(this.id)" img src="assets/7.jpg" alt="People" style="width:100%" download>
-      <h4>John Wick Chapter 1</h4>
+      <img id="jw3" onclick="get(this.id)" src="assets/9.jpg" alt="People" style="width:100%">
+      <h4>jw3</h4>
     </div>
   </div>
 
@@ -77,8 +77,7 @@ function get(id){
       var title = info["title"]
       var summary = info["summary"]
       var runningtime = info["runningtime"]
-      alert("title : " + title + "\n" + "summary : " + summary + "\n" + "runningtime : " + runningtime)
-      //window.location.href="info.html?title=" + title + "&summary=" + summary + "&runningtime=" + runningtime;
+      window.location.href="info.html?title=" + title + "&summary=" + summary + "&runningtime=" + runningtime;
     },
     error : function(){
       alert("No Movie Information")
