@@ -68,17 +68,17 @@
 <script charset="UTF-8">
 function get(id){
   $.ajax({
-    url:"http://localhost:65432/ns_movies/movies/" + id,
+    url:"http://172.30.6.218:5000/ns_movies/movies/" + id,
     method: "GET",
     dataType: "json",
     contentType: "application/json",
     success : function(resp){
       var info = resp.data
-      var name = info["name"]
-      var price = info["price"]
-      var desc = info["descript"]
-      // alert("제목 : " + name + "\n" + "가격 : " + price + "\n" + "내용 : " + desc)
-      window.location.href="info.html?name=" + name + "&price=" + price + "&desc=" + desc;
+      var title = info["title"]
+      var summary = info["summary"]
+      var runningtime = info["runningtime"]
+      alert("title : " + title + "\n" + "summary : " + summary + "\n" + "runningtime : " + runningtime)
+      //window.location.href="info.html?title=" + title + "&summary=" + summary + "&runningtime=" + runningtime;
     },
     error : function(){
       alert("No Movie Information")
@@ -88,4 +88,3 @@ function get(id){
 </script>
 </body>
 </html>
-
