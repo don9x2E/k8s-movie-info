@@ -1,0 +1,7 @@
+FROM nginx
+WORKDIR /usr/share/
+RUN apt update && apt upgrade -y
+RUN apt install git -y
+RUN git clone https://github.com/don9x2E/k8s-movie-info
+RUN cp -r k8s-movie-info/movie-html/* /usr/share/nginx/html
+EXPOSE 80
